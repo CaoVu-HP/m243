@@ -1,0 +1,54 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/Bss.png</argument>
+                <argument name="logo_img_width" xsi:type="number">200</argument>
+                <argument name="logo_img_height" xsi:type="number">200</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Delete footer luma menu -->
+                <referenceContainer name="footer">
+                    <referenceBlock name="footer_links" remove="true" />
+                    <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" before="-" template="Magento_Theme::footer_menu.phtml"/>
+                </referenceContainer>
+
+        <!-- Delete footer copy right -->
+<!--        <referenceContainer name="copyright" remove="true"/>-->
+
+        <!-- Add footer-pay static block -->
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-pay">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-pay</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!-- Add footer-content static block -->
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-content">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-content</argument>
+                </arguments>
+            </block>
+
+        </referenceContainer>
+
+
+
+        <!-- Add footer-menu static block -->
+<!--        <referenceContainer name="footer">-->
+<!--            <block class="Magento\Cms\Block\Block" name="footer-menu">-->
+<!--                <arguments>-->
+<!--                    <argument name="block_id" xsi:type="string">footer-menu</argument>-->
+<!--                </arguments>-->
+<!--            </block>-->
+<!--        </referenceContainer>-->
+
+
+
+    </body>
+        </page>

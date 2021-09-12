@@ -1,0 +1,16 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<small class="copyright" style="background-color: #919B9C;text-align: left">
+    <span style="color: black; ">© AWESOME A MAGENTO THEME BY RED FACTORY. ALL RIGHTS RESERVED </span>
+        <?php
+        echo $this->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('footer-menu')
+            ->toHtml();
+        ?>
+
+</small>

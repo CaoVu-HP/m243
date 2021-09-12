@@ -1,0 +1,20 @@
+<?php
+
+namespace Mageplaza\HelloWorld\Block;
+
+class Link extends \Magento\Framework\View\Element\Html\Link
+{
+    /**
+     * /home/caovu/www/m243/app/code/Mageplaza/HelloWorld/Block/Link.php
+     * Render block HTML.
+     *
+     * @return string
+     */
+    protected function _toHtml()
+    {
+        if (false != $this->getTemplate()) {
+            return parent::_toHtml();
+        }
+        return '<li><a ' . $this->getLinkAttributes() . ' >' . $this->escapeHtml($this->getLabel()) . '</a></li>';
+    }
+}

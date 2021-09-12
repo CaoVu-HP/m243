@@ -1,0 +1,13 @@
+<?php
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('footer-content')
+    ->toHtml();
+
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('footer-pay')
+    ->toHtml();
+
+
+?>
